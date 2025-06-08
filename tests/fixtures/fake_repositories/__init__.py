@@ -1,0 +1,5 @@
+from .fake_producer_repository import fake_producer_repository
+from .fake_property_repository import fake_property_repository
+from .fake_planting_repository import fake_planting_repository
+from .fake_harvest_repository import fake_harvest_repository
+from .fake_repositories_manager import FakeRepositoriesManager

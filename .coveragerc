@@ -1,0 +1,8 @@
+[run]
+omit = 
+    src/commons/errors.py
+    alembic/env.py
+    src/config.py
+    src/services/interfaces/*
+    src/infra/migrations/*
+    tests/*

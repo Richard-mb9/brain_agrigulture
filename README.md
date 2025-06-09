@@ -95,3 +95,7 @@ Com o serviço em execução, acesse:
 http://localhost:8080/doc/redoc
 
 Lá você encontrará todos os endpoints disponíveis da API.
+
+## Diagrama do banco de dados
+
+<img src="docs/Diagrama.png" alt="Diagrama de tabelas" />

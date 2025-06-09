@@ -1,0 +1,1 @@
+gunicorn -b :8080 -k uvicorn.workers.UvicornWorker app:app

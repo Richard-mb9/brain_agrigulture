@@ -96,7 +96,7 @@ def update(
     description="Exclui um determinada propriedade",
 )
 def delete(
-    producerId: int,
+    propertyId: int,
     db_manager: DatabaseManager = Depends(get_database_manager),
 ):
-    return PropertyController(db_manager=db_manager).delete(property_id=producerId)
+    return PropertyController(db_manager=db_manager).delete(property_id=propertyId)

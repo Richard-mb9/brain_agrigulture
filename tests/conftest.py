@@ -9,3 +9,4 @@ from tests.fixtures.fake_repositories import (
     fake_property_repository,
 )
 from tests.fixtures.mock_repository_manager import mock_repository_manager
+from tests.fixtures.clear_all_tables import clear_all_tables

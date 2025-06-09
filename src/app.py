@@ -20,7 +20,7 @@ def create_app():
     import_mappers()
 
     app = FastAPI(
-        title="Brasilprev - manutencao API",
+        title="Brain Agriculture - API",
         description="API for manutencao payments",
         openapi_url=API_DOC_JSON,
         redoc_url=API_DOC_REDOC,

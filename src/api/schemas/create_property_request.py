@@ -16,7 +16,7 @@ class CreatePropertyRequest(BaseModel):
     def validate_area(self):
         if self.__area_is_valid() is False:
             raise BadRequestError(
-                "The area of ​​vegetation and the agricultural area combined cannot be greater than the total area."
+                "The area of vegetation and the agricultural area combined cannot be greater than the total area."
             )
 
         return self

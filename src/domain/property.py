@@ -27,6 +27,3 @@ class Property:
         self.total_area = total_area
         self.agricultural_area = agricultural_area
         self.area_vegetation = area_vegetation
-
-    def area_is_valid(self):
-        return self.agricultural_area + self.area_vegetation <= self.total_area

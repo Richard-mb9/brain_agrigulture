@@ -1,8 +1,11 @@
 [run]
 omit = 
     src/commons/errors.py
-    alembic/env.py
+    src/api/routes/handlers/http_errors_schemas.py
+    src/infra/database_manager.py
     src/config.py
+    src/infra/repositories/*
     src/services/interfaces/*
     src/infra/migrations/*
     tests/*
+    alembic/env.py

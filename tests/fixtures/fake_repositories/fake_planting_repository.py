@@ -24,18 +24,22 @@ class FakePlantingRepository(PlantingRepositoryInterface):
             planting for planting in self.data if planting.property_id == property_id
         ]
 
-    def list_all(self):
-        return self.data
+    def list_all(self, crop_name: str = None):
+        return [
+            planting
+            for planting in self.data
+            if (crop_name is None or planting == crop_name)
+        ]
 
-    def update(self, entity_id: int, data_to_update: dict):
+    def update(self, planting_id: int, data_to_update: dict):
         for entity in self.data:
-            if entity.id == entity_id:
+            if entity.id == planting_id:
                 for key in data_to_update:
                     if data_to_update[key] is not None:
                         setattr(entity, key, data_to_update[key])
 
-    def delete(self, entity_id: int):
-        self.data = [entity for entity in self.data if entity.id != entity_id]
+    def delete(self, planting_id: int):
+        self.data = [entity for entity in self.data if entity.id != planting_id]
 
 
 fake_planting_repository = FakePlantingRepository()

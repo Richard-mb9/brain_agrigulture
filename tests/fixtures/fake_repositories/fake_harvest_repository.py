@@ -22,9 +22,9 @@ class FakeHarvestRepository(HarvestRepositoryInterface):
     def list_all(self) -> List[Harvest]:
         return self.data
 
-    def update(self, entity_id: int, data_to_update: dict):
+    def update(self, harvest_id: int, data_to_update: dict):
         for entity in self.data:
-            if entity.id == entity_id:
+            if entity.id == harvest_id:
                 for key in data_to_update:
                     if data_to_update[key] is not None:
                         setattr(entity, key, data_to_update[key])

@@ -17,7 +17,7 @@ class FakePropertyRepository(PropertyRepositoryInterface):
     def find_by_id(self, property_id) -> Union[Property, None]:
         for property in self.data:
             if property.id == property_id:
-                return property_id
+                return property
 
     def find_by_producer_id(self, producer_id: int) -> List[Property]:
         return [
@@ -27,15 +27,15 @@ class FakePropertyRepository(PropertyRepositoryInterface):
     def list_all(self) -> List[Property]:
         return self.data
 
-    def update(self, entity_id: int, data_to_update: dict):
+    def update(self, property_id: int, data_to_update: dict):
         for entity in self.data:
-            if entity.id == entity_id:
+            if entity.id == property_id:
                 for key in data_to_update:
                     if data_to_update[key] is not None:
                         setattr(entity, key, data_to_update[key])
 
-    def delete(self, entity_id: int):
-        self.data = [entity for entity in self.data if entity.id != entity_id]
+    def delete(self, property_id: int):
+        self.data = [entity for entity in self.data if entity.id != property_id]
 
 
 fake_property_repository = FakePropertyRepository()
